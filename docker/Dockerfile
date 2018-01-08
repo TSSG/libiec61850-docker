@@ -15,13 +15,17 @@ ENV build_date 2017-11-10
 CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update --fix-missing && apt-get upgrade -y
 
-RUN apt-get install git build-essential libsqlite3-dev -y
+RUN apt-get install git build-essential libsqlite3-dev default-jdk swig -y
 
 WORKDIR /opt
 
-RUN git clone https://github.com/mz-automation/libiec61850
+#Setting up the command line argument to pass in gituser access_token
+ARG gituser
+ARG access_token
+
+RUN git clone https://$gituser:$access_token@servo.tssg.org/re-serve/development/libiec61850.git
 
 WORKDIR /opt/libiec61850
 

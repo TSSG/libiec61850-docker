@@ -1,14 +1,18 @@
 # Base Docker environment for libIEC61850
-This is a Docker environment that can host the mz-automation libIEC61850 project.
+This is a Docker environment that can host the RESERVE clone of the libIEC61850 project.
 
 ## Building and Running the Docker Environment
 [Docker](https://www.docker.com/) must be installed on the machine before anything can proceed.
 
+You must also have a GitLab access token from your own personal access tokens as enabled via Gitlab and outlined in https://docs.gitlab.com/ce/user/profile/personal_access_tokens.html
+
 In order to create this libIEC61850 container you must be in the "docker" folder and run the command
 
-> make build
+> make gituseraccess="sam" gitaccesstoken="4a5wZhYKuGvd6ZgYL"
 
-And let Docker do it's magic from there. Once the build is complete check that the Docker image is available with
+Please note that the combination of "sam" and gitaccesstoken="4a5wZhYKuGvd6ZgYL" will not work, you must use your own details.
+
+Now let Docker do it's magic from there. Once the build is complete check that the Docker image is available with
 
 > docker images
 
@@ -71,7 +75,7 @@ received report for simpleIOGenericIO/LLN0.RP.EventsRCB01
   GGIO1.SPCSO2.stVal: 0 (included for reason 4)
   GGIO1.SPCSO3.stVal: 0 (included for reason 4)
 ```
-This example is now complete, you are free to test the other examples. 
+This example is now complete, you are free to test the other examples.
 
 In order to exit from the shell, CRTL-D.
 
