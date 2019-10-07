@@ -87,4 +87,4 @@ To start the container again just type
 
 > docker start reserve-libiec61850-local
 
-Copyright Waterford Institute of Technology 2017, Telecommunications Software and Systems Group (TSSG), Author Miguel Ponce de Leon <miguelpdl@tssg.org>
+Copyright Waterford Institute of Technology 2017~2019, Telecommunications Software and Systems Group (TSSG), Author Miguel Ponce de Leon <miguelpdl@tssg.org>
