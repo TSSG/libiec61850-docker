@@ -28,7 +28,7 @@ Now run the command in the preferred mode
 
 > ./dockerrun.sh -e dev
 
-To see whether the broker is up and running have a look in the log files
+To see whether the container is up and running have a look in the log files
 
 > docker logs reserve-libiec61850-local
 
