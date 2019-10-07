@@ -1,4 +1,4 @@
-# Copyright Waterford Institute of Technology 2017
+# Copyright Waterford Institute of Technology 2017~2019
 # Telecommunications Software and Systems Group (TSSG)
 # Author Miguel Ponce de Leon <miguelpdl@tssg.org>
 #
@@ -7,9 +7,9 @@
 # to `latest`! See
 # https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
 # for a list of version numbers.
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:master
 MAINTAINER Miguel Ponce de Leon <miguelpdl@tssg.org>
-ENV build_date 2017-11-10
+ENV build_date 2019-10-04
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
