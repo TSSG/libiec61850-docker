@@ -4,8 +4,6 @@ This is a Docker environment that can host the clone of the libIEC61850 project.
 ## Building and Running the Docker Environment
 [Docker](https://www.docker.com/) must be installed on the machine before anything can proceed.
 
-You must also have a GitLab access token from your own personal access tokens as enabled via Gitlab and outlined in https://docs.gitlab.com/ce/user/profile/personal_access_tokens.html
-
 In order to create this libIEC61850 container you must be in the "docker" folder and run the command
 
 > make build 
