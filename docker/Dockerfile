@@ -21,11 +21,7 @@ RUN apt-get install git build-essential libsqlite3-dev default-jdk swig -y
 
 WORKDIR /opt
 
-#Setting up the command line argument to pass in gituser access_token
-ARG gituser
-ARG access_token
-
-RUN git clone https://$gituser:$access_token@servo.tssg.org/re-serve/development/libiec61850.git
+RUN git clone https://github.com/TSSG/libiec61850.git 
 
 WORKDIR /opt/libiec61850
 

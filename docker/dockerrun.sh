@@ -20,12 +20,11 @@ END
 function run_container () {
 
 # Run the main container.
-# removed the user option for the moment =>  -u `id -u $USER` \
 
 docker run \
     --privileged \
     --name ${CONTAINER_NAME} \
-    -d -t reserve/libiec61850
+    -d -t tssg/libiec61850
 
 }
 
@@ -50,7 +49,7 @@ else
             fi
            elif [ "$2" == "dev" ] ; then
               # Give the container a meaningful name
-              CONTAINER_NAME=reserve-libiec61850-local
+              CONTAINER_NAME=tssg-libiec61850-local
 
               # Set the port
               #PORT="-p 1883:1883"
